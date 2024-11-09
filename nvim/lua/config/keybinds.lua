@@ -1,7 +1,9 @@
 local bind = vim.api.nvim_set_keymap
 local opt = { noremap = true, silent = true }
 --normal mode
-
+vim.keymap.set("n", "<leader>w", ":w<CR>", {})
+vim.keymap.set("n", "<leader>q", ":q<CR>", {})
+vim.keymap.set("n", "<leader>o", "o<Esc>", {})
 bind("n", "<leader>fg", ":Telescope live_grep<CR>", opt)
 bind("n", "<leader>ff", ":Telescope find_files<CR>", opt)
 --visual mode
@@ -22,3 +24,5 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, {})
+
+
